@@ -1,0 +1,12 @@
+@model IEnumerable<mvcTemplate.Models.Teacher>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <label>Nom:</label>
+        <input type="text" name="Name" value="@Model.Name" required /><br />
+        <label>Prénom:</label>
+        <input type="text" name="Namesc" value="@Model.Namesc" required /><br />
+        <label>Âge:</label>
+        <input type="number" name="Age" value="@Model.Age" required /><br />
+        <button type="submit">Modifier</button>
+    </form>

@@ -1,0 +1,32 @@
+@model IEnumerable<mvcTemplate.Models.Teacher>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Âge</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var teacher in Model)
+        {
+            <tr>
+                <td>@teacher.Id</td>
+                <td>@teacher.Name</td>
+                <td>@teacher.Namesc</td>
+                <td>@teacher.Age</td>
+                <td>
+                    <a href="/Teacher/Details/@teacher.Id">Détails</a> |
+                    <a href="/Teacher/Edit/@teacher.Id">Modifier</a> |
+                    <a href="/Teacher/Delete/@teacher.Id">Supprimer</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <a href="/Teacher/Create">Ajouter un enseignant</a>
