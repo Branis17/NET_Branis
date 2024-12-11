@@ -10,7 +10,7 @@ namespace mvcTemplate.Models
         [StringLength(50, ErrorMessage = "Le nom ne peut pas dépasser 50 caractères.")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Le prénom est requis.")]
+       [Required(ErrorMessage = "Le prénom est requis.")]
         [StringLength(50, ErrorMessage = "Le prénom ne peut pas dépasser 50 caractères.")]
         public string Namesc { get; set; }
 

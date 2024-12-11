@@ -40,8 +40,8 @@ public class TeacherController : Controller
             return View(teacher);
         }
 
-        _context.Teachers.Add(teacher); // Ajoute l'enseignant
-        _context.SaveChanges();        // Sauvegarde dans la BDD
+        _context.Teachers.Add(teacher); 
+        _context.SaveChanges();       
         return RedirectToAction(nameof(Index));
     }
 

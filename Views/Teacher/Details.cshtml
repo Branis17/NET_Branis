@@ -1,10 +1,12 @@
-@model IEnumerable<mvcTemplate.Models.Teacher>
- 
+@model mvcTemplate.Models.Teacher
 
-    <h2>Détails de l'enseignant</h2>
-    <p>ID: @Model.Id</p>
-    <p>Nom: @Model.Name</p>
-    <p>Prénom: @Model.Namesc</p>
-    <p>Âge: @Model.Age</p>
+<h2>Détails de l'enseignant</h2>
 
-    <a href="/Teacher/Index">Retour à la liste</a>
+<div>
+    <p><strong>ID:</strong> @Model.Id</p>
+    <p><strong>Nom:</strong> @Model.Name</p>
+    <p><strong>Prénom:</strong> @Model.Namesc</p>
+    <p><strong>Âge:</strong> @Model.Age</p>
+</div>
+
+<a href="/Teacher/Index" class="btn btn-secondary">Retour à la liste</a>
