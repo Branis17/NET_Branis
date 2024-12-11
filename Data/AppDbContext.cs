@@ -8,5 +8,8 @@ namespace mvcTemplate.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Student> Students { get; set; }
+
+
     }
 }
