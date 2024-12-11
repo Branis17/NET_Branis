@@ -1,0 +1,15 @@
+@model mvcTemplate.Models.Student
+
+<h2>Supprimer Étudiant</h2>
+
+<p>Voulez-vous vraiment supprimer cet étudiant ?</p>
+
+<p><strong>ID :</strong> @Model.Id</p>
+<p><strong>Prénom :</strong> @Model.Firstname</p>
+<p><strong>Nom :</strong> @Model.Lastname</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+    <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+</form>

@@ -1,0 +1,40 @@
+@model mvcTemplate.Models.Student
+
+<h2>Ajouter un Étudiant</h2>
+
+<form asp-action="Create" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label asp-for="Firstname" class="control-label">Prénom</label>
+        <input asp-for="Firstname" class="form-control" />
+        <span asp-validation-for="Firstname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Lastname" class="control-label">Nom</label>
+        <input asp-for="Lastname" class="form-control" />
+        <span asp-validation-for="Lastname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age" class="control-label">Âge</label>
+        <input asp-for="Age" class="form-control" type="number" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GPA" class="control-label">GPA</label>
+        <input asp-for="GPA" class="form-control" type="number" step="0.1" />
+        <span asp-validation-for="GPA" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Major" class="control-label">Spécialité</label>
+        <select asp-for="Major" asp-items="Html.GetEnumSelectList<mvcTemplate.Models.Major>()" class="form-control"></select>
+        <span asp-validation-for="Major" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AdmissionDate" class="control-label">Date d'Admission</label>
+        <input asp-for="AdmissionDate" class="form-control" type="date" />
+        <span asp-validation-for="AdmissionDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+    </div>
+</form>

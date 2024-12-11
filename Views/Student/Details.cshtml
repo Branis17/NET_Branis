@@ -1,0 +1,13 @@
+@model mvcTemplate.Models.Student
+
+<h2>Détails de l'Étudiant</h2>
+
+<p><strong>ID :</strong> @Model.Id</p>
+<p><strong>Prénom :</strong> @Model.Firstname</p>
+<p><strong>Nom :</strong> @Model.Lastname</p>
+<p><strong>Âge :</strong> @Model.Age</p>
+<p><strong>GPA :</strong> @Model.GPA</p>
+<p><strong>Spécialité :</strong> @Model.Major</p>
+<p><strong>Date d'Admission :</strong> @Model.AdmissionDate.ToShortDateString()</p>
+
+<a asp-action="Index" class="btn btn-secondary">Retour</a>
