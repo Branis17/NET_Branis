@@ -1,0 +1,32 @@
+@model mvcTemplate.Models.Event
+
+<h2>Détails de l'Événement</h2>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label">Titre :</label>
+        <p class="form-control-static">@Model.Title</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Description :</label>
+        <p class="form-control-static">@Model.Description</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Date :</label>
+        <p class="form-control-static">@Model.EventDate.ToShortDateString()</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Participants Max :</label>
+        <p class="form-control-static">@Model.MaxParticipants</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Lieu :</label>
+        <p class="form-control-static">@Model.Location</p>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Date de création :</label>
+        <p class="form-control-static">@Model.CreatedAt.ToShortDateString()</p>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-primary">Retour à la liste</a>

@@ -1,22 +1,22 @@
 ﻿@model IEnumerable<mvcTemplate.Models.Student>
 
-<h2>Liste des Étudiants</h2>
+    <h2>Liste des Étudiants</h2>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>Âge</th>
-            <th>GPA</th>
-            <th>Major</th>
-            <th>Date d'Admission</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var student in Model)
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>GPA</th>
+                <th>Major</th>
+                <th>Date d'Admission</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
         {
             <tr>
                 <td>@student.Id</td>
@@ -33,7 +33,7 @@
                 </td>
             </tr>
         }
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
-<a asp-action="Create" class="btn btn-primary">Ajouter un Étudiant</a>
+    <a asp-action="Create" class="btn btn-primary">Ajouter un Étudiant</a>

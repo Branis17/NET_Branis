@@ -5,4 +5,12 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    
+    <div class="mt-4">
+        <a href="@Url.Action("Login", "Account")" class="btn btn-primary btn-lg">Login</a>
+        <a href="@Url.Action("Register", "Account")" class="btn btn-secondary btn-lg">Register</a>
+        <a href="@Url.Action("Index", "Event")" class="btn btn-info btn-lg mt-3">View Events</a>
+
+    </div>
 </div>
